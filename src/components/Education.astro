@@ -1,0 +1,48 @@
+---
+interface Education {
+  degree: string;
+  institution: string;
+  year: string;
+  description: string;
+}
+
+const education: Education[] = [
+  {
+    degree: "B-tech in computer science and engineering",
+    institution: "jayaprakash narayan college engineering",
+    year: "2022",
+    description: "B-tech in computer science and engineering. Graduated with honors."
+  },
+  {
+    degree: "Doploma in mechanical enginnering",
+    institution: "government ploytechnic college",
+    year: "2020",
+    description: " Completed diploma in mechanical enginnering. Graduated with honors."
+  },
+  {
+    degree: "High School",
+    institution: "chanakya high school",
+    year: "2008-2020",
+    description: "Completed high school education with focus on mathematics, science, and social studies. Graduated with honors."
+  }
+];
+---
+<section id="education" class="py-20 bg-gray-900 text-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-16">Education</h2>
+    
+    <div class="max-w-4xl mx-auto space-y-12">
+      {education.map(edu => (
+        <div class="border-l-4 border-blue-600 pl-6 py-4">
+          <h3 class="text-2xl font-bold mb-2">{edu.degree}</h3>
+          <div class="flex items-center text-gray-300 mb-4">
+            <span class="mr-4">{edu.institution}</span>
+            <span class="text-blue-400">•</span>
+            <span class="ml-4">{edu.year}</span>
+          </div>
+          <p class="text-gray-400">{edu.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
